@@ -10,11 +10,11 @@ def filtration(txt) :
 	return out
 
 def main():
-	txt = input()
+	txt = input("Enter input text: ")
 	tokens = tokenizer(txt)
 	print("Tokens before filtration:",tokens)
 	tokens = filtration(txt)
 	print("Tokens after filtration:",tokens)
 
-if __name == '__main__' :
+if __name__ == '__main__' :
 	main()
