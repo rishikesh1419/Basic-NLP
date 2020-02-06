@@ -1,4 +1,4 @@
-import re
+import re, os, codecs
 from tokenization import tokenizer
 
 def filtration(txt) :
@@ -10,11 +10,12 @@ def filtration(txt) :
 	return out
 
 def main():
-	txt = input("Enter input text: ")
-	tokens = tokenizer(txt)
-	print("Tokens before filtration:",tokens)
-	tokens = filtration(txt)
-	print("Tokens after filtration:",tokens)
+        f = codecs.open('input1.txt', encoding='UTF-8')
+        txt = f.read()
+        tokens = tokenizer(txt)
+        print("Tokens before filtration:",tokens)
+        tokens = filtration(txt)
+        print("Tokens after filtration:",tokens)
 
 if __name__ == '__main__' :
 	main()
